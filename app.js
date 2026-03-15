@@ -61,8 +61,22 @@ async function fetchAPOD() {
   } catch (err) {
     console.error('APOD fetch error:', err);
     loadingEl.style.display = 'none';
-    contentEl.style.display = 'none';
-    errorEl.style.display = 'block';
+    // Show fallback image instead of empty error
+    const imgEl = document.getElementById('apod-image');
+    if (imgEl) {
+      imgEl.src = 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Webb%27s_First_Deep_Field_%28adjusted%29.jpg';
+      imgEl.alt = "Webb's First Deep Field (fallback)";
+    }
+    const titleEl = document.getElementById('apod-title');
+    if (titleEl) titleEl.textContent = "Webb's First Deep Field";
+    const explEl = document.getElementById('apod-explanation');
+    if (explEl) explEl.textContent = "NASA's Astronomy Picture of the Day is temporarily unavailable (rate limit or network). Shown: Webb's First Deep Field, one of the first images from JWST.";
+    const linkEl = document.getElementById('apod-link');
+    if (linkEl) linkEl.href = 'https://apod.nasa.gov/';
+    const dateEl = document.getElementById('apod-date');
+    if (dateEl) dateEl.textContent = '';
+    contentEl.style.display = 'grid';
+    errorEl.style.display = 'none';
   }
 }
 
