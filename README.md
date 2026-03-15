@@ -27,6 +27,19 @@ The app uses NASA's APOD API. A demo key works for light use but has rate limits
 1. Get a free key at [api.nasa.gov](https://api.nasa.gov/)
 2. Edit `config.js` and set `nasaApiKey: 'YOUR_KEY'`
 
+## Deploy to GitHub Pages
+
+1. Create a new repo on [GitHub](https://github.com/new) (e.g. `jwst-tracker`).
+2. Push this project:
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/jwst-tracker.git
+   git branch -M main
+   git push -u origin main
+   ```
+3. In the repo: **Settings → Pages** → Source: **Deploy from a branch**
+4. Branch: **main**, folder: **/ (root)** → Save
+5. After 1–2 minutes, your site will be at `https://YOUR_USERNAME.github.io/jwst-tracker/`
+
 ## Data Sources
 
 - [NASA Open APIs](https://api.nasa.gov/) — Astronomy Picture of the Day
