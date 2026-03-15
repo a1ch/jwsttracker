@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primary Mirror | JWST Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">◈</span>
+          <h1>JWST Tracker</h1>
+          <span class="subtitle">James Webb Space Telescope</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav-wrap">
+      <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="orbit.html">Orbit</a>
+        <a href="mirror.html" class="active">Mirror</a>
+        <a href="instruments.html">Instruments</a>
+        <a href="solar-system.html">Solar System</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="technical-specs.html">Specs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <h1>Primary Mirror</h1>
+      <p class="lead">Webb’s 6.5-meter primary mirror is made of 18 hexagonal segments of gold-coated beryllium. It collects enough light to see the first galaxies and the faint glow of exoplanets.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Size and design</h2>
+      <p>The James Webb Space Telescope’s primary mirror is <strong>6.5 meters (21.3 feet)</strong> in diameter—about 2.7 times the diameter of Hubble’s 2.4-meter mirror. That gives Webb more than seven times the light-collecting area of Hubble, so it can see fainter and more distant objects.</p>
+      <p>The mirror is made of <strong>18 hexagonal segments</strong>. Hexagons pack together with no gaps, and the shape is easier to fold for launch. Each segment is about 1.3 meters across and weighs roughly 20 kilograms. They are made of <strong>beryllium</strong>, which is stiff, light, and stable at the cryogenic temperatures Webb needs for infrared observations.</p>
+      <div class="media-single">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Webb%27s_First_Deep_Field_%28adjusted%29.jpg" alt="Webb's First Deep Field" loading="lazy" decoding="async">
+        <div class="caption">Webb’s First Deep Field—possible because of the large mirror’s light-gathering power. Credit: NASA, ESA, CSA, STScI</div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Gold coating</h2>
+      <p>Each segment is coated with a thin layer of <strong>gold</strong>—about 0.1 micron thick—to maximize reflectivity in the infrared. Gold reflects more than 98% of infrared light in Webb’s wavelength range. The famous “gold mirror” look is a side effect of optimizing for science, not aesthetics.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Folding and deployment</h2>
+      <p>The mirror was too large to fit inside the Ariane 5 rocket in its final shape. So it was built in three sections (a center section and two wings), and the two wings were <strong>folded back</strong> for launch. After launch, the wings were unfolded in space. Each segment has actuators so engineers can adjust the mirror’s shape with nanometer precision. This process, called wavefront sensing and control, turned the 18 segments into a single, precise optical surface.</p>
+      <div class="media-grid">
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Stephan%27s_Quintet_as_seen_by_JWST%27s_NIRCAM.png" alt="Stephan's Quintet" loading="lazy" decoding="async">
+          <div class="caption">Stephan’s Quintet (NIRCam)—sharp imaging from the aligned mirror. Credit: NASA, ESA, CSA, STScI</div>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Southern_Ring_Nebula_%28NIRCam_Image%29.png" alt="Southern Ring Nebula" loading="lazy" decoding="async">
+          <div class="caption">Southern Ring Nebula. Credit: NASA, ESA, CSA, STScI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Secondary mirror</h2>
+      <p>Webb also has a <strong>secondary mirror</strong>—a convex hyperbola about 0.74 meters across—held in front of the primary by three struts. Light from the sky hits the primary, bounces to the secondary, and then goes into the instrument module behind the primary. This design (Cassegrain-style) keeps the instruments in a compact package and allows the sunshield to protect the whole telescope.</p>
+      <div class="media-single">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sombrero_Galaxy_%28NIRCam-MIRI%29_%282025-127%29.jpg" alt="Sombrero Galaxy" loading="lazy" decoding="async">
+        <div class="caption">Sombrero Galaxy (NIRCam and MIRI). Credit: NASA, ESA, CSA, STScI</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://api.nasa.gov" target="_blank" rel="noopener">NASA Open APIs</a> • <a href="https://webb.nasa.gov" target="_blank" rel="noopener">JWST at NASA</a> • <a href="https://webbtelescope.org" target="_blank" rel="noopener">WebbTelescope.org</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWST Tracker | James Webb Space Telescope Stats & Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">◈</span>
+          <h1>JWST Tracker</h1>
+          <span class="subtitle">James Webb Space Telescope</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav-wrap">
+      <div class="nav-inner">
+        <a href="index.html" class="active">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="orbit.html">Orbit</a>
+        <a href="mirror.html">Mirror</a>
+        <a href="instruments.html">Instruments</a>
+        <a href="solar-system.html">Solar System</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="technical-specs.html">Specs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Hero Stats -->
+    <section class="section hero-stats">
+      <h2 class="section-title">Mission at a Glance</h2>
+      <div class="stats-grid">
+        <a href="mission.html#distance" class="stat-card">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-value" id="dist-earth">—</div>
+          <div class="stat-label">Million km from Earth</div>
+        </a>
+        <a href="orbit.html" class="stat-card">
+          <div class="stat-icon">☀️</div>
+          <div class="stat-value">L2</div>
+          <div class="stat-label">Orbit Location</div>
+        </a>
+        <a href="mirror.html" class="stat-card">
+          <div class="stat-icon">🔭</div>
+          <div class="stat-value">6.5 m</div>
+          <div class="stat-label">Primary Mirror Diameter</div>
+        </a>
+        <a href="instruments.html" class="stat-card">
+          <div class="stat-icon">📡</div>
+          <div class="stat-value">5</div>
+          <div class="stat-label">Science Instruments</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Instrument Stats -->
+    <section class="section instruments">
+      <h2 class="section-title">Science Instruments</h2>
+      <div class="instruments-grid">
+        <a href="nircam.html" class="instrument-card">
+          <h3>NIRCam</h3>
+          <p>Near-Infrared Camera — Primary imager, 0.6–5 µm</p>
+        </a>
+        <a href="nirspec.html" class="instrument-card">
+          <h3>NIRSpec</h3>
+          <p>Near-Infrared Spectrograph — Multi-object spectroscopy</p>
+        </a>
+        <a href="miri.html" class="instrument-card">
+          <h3>MIRI</h3>
+          <p>Mid-Infrared Instrument — 5–28 µm imaging & spectroscopy</p>
+        </a>
+        <a href="niriss.html" class="instrument-card">
+          <h3>NIRISS</h3>
+          <p>Near-Infrared Imager — Exoplanet transit spectroscopy</p>
+        </a>
+        <a href="fgs.html" class="instrument-card">
+          <h3>FGS</h3>
+          <p>Fine Guidance Sensor — Pointing stability</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Astronomy Picture of the Day -->
+    <section class="section apod">
+      <h2 class="section-title">NASA Astronomy Picture of the Day <a href="gallery.html">→ Gallery</a></h2>
+      <p class="section-desc">Often featuring JWST discoveries and deep space imagery</p>
+      <div class="apod-container">
+        <div class="apod-loading" id="apod-loading">Loading...</div>
+        <div class="apod-content" id="apod-content" style="display: none;">
+          <div class="apod-image-wrap">
+            <img id="apod-image" src="" alt="Astronomy Picture of the Day">
+            <div class="apod-badge" id="apod-date"></div>
+          </div>
+          <div class="apod-info">
+            <h3 id="apod-title"></h3>
+            <p id="apod-explanation"></p>
+            <a id="apod-link" href="#" target="_blank" rel="noopener" class="apod-link">View on NASA →</a>
+          </div>
+        </div>
+        <div class="apod-error" id="apod-error" style="display: none;">
+          <p>Unable to load today's image. Try adding a NASA API key in <code>config.js</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Milestones -->
+    <section class="section milestones">
+      <h2 class="section-title">Key Milestones <a href="milestones.html">→ Full timeline</a></h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">Dec 25, 2021</span>
+          <span class="timeline-event">Launch aboard Ariane 5</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Jan 24, 2022</span>
+          <span class="timeline-event">Arrival at L2 orbit</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Jul 12, 2022</span>
+          <span class="timeline-event">First full-color images released</span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2022–Present</span>
+          <span class="timeline-event">Ongoing science operations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specs -->
+    <section class="section specs">
+      <h2 class="section-title">Technical Specifications <a href="technical-specs.html">→ Full specs</a></h2>
+      <div class="specs-table-wrap">
+        <table class="specs-table">
+          <tr>
+            <td>Primary mirror</td>
+            <td>6.5 m gold-coated beryllium, 18 segments</td>
+          </tr>
+          <tr>
+            <td>Sunshield</td>
+            <td>5 layers, tennis court-sized</td>
+          </tr>
+          <tr>
+            <td>Wavelength range</td>
+            <td>0.6 µm (visible) to 28 µm (mid-infrared)</td>
+          </tr>
+          <tr>
+            <td>Orbit</td>
+            <td>Sun–Earth L2 Lagrange point, ~1.5 million km</td>
+          </tr>
+          <tr>
+            <td>Partners</td>
+            <td>NASA, ESA, CSA</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://api.nasa.gov" target="_blank" rel="noopener">NASA Open APIs</a> • 
+       <a href="https://webb.nasa.gov" target="_blank" rel="noopener">JWST at NASA</a> • 
+       <a href="https://webbtelescope.org" target="_blank" rel="noopener">WebbTelescope.org</a></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

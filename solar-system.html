@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System | JWST Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">◈</span>
+          <h1>JWST Tracker</h1>
+          <span class="subtitle">James Webb Space Telescope</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav-wrap">
+      <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="orbit.html">Orbit</a>
+        <a href="mirror.html">Mirror</a>
+        <a href="instruments.html">Instruments</a>
+        <a href="solar-system.html" class="active">Solar System</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="technical-specs.html">Specs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <h1>Solar System</h1>
+      <p class="lead">Positions of the Sun, planets, and JWST. Choose a date or turn on live to use today’s date (updates every minute).</p>
+    </section>
+
+    <section class="detail-section solar-system-section">
+      <div class="solar-system-controls">
+        <label>
+          <span>Date:</span>
+          <input type="date" id="solar-date" />
+        </label>
+        <button type="button" id="solar-now">Use today (now)</button>
+        <label class="solar-live">
+          <input type="checkbox" id="solar-live" />
+          <span>Live (update daily / every minute)</span>
+        </label>
+      </div>
+      <p id="solar-time-label" class="solar-time-label">Positions for: —</p>
+      <div class="solar-canvas-wrap">
+        <div class="solar-zoom-controls">
+          <button type="button" id="solar-zoom-out" title="Zoom out">−</button>
+          <span id="solar-zoom-label">100%</span>
+          <button type="button" id="solar-zoom-in" title="Zoom in">+</button>
+          <button type="button" id="solar-zoom-reset" title="Reset zoom">Reset</button>
+        </div>
+        <canvas id="solar-canvas"></canvas>
+      </div>
+      <div class="solar-legend">
+        <p><strong>Shown:</strong> Sun (center), Mercury through Neptune, and JWST at Sun–Earth L2 (dashed orbit). Zoom in to see Earth and JWST clearly. View is from above the ecliptic; positions are calculated for the selected date. Zoom: scroll wheel or use the + / − / Reset buttons.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://api.nasa.gov" target="_blank" rel="noopener">NASA Open APIs</a> • <a href="https://webb.nasa.gov" target="_blank" rel="noopener">JWST at NASA</a> • <a href="https://webbtelescope.org" target="_blank" rel="noopener">WebbTelescope.org</a></p>
+  </footer>
+
+  <script src="solar-system.js"></script>
+  <script>
+    (function () {
+      var canvas = document.getElementById('solar-canvas');
+      var dateInput = document.getElementById('solar-date');
+      var timeLabel = document.getElementById('solar-time-label');
+      var nowBtn = document.getElementById('solar-now');
+      var liveCheckbox = document.getElementById('solar-live');
+
+      // Set default to today
+      var today = new Date();
+      var y = today.getFullYear();
+      var m = String(today.getMonth() + 1).padStart(2, '0');
+      var d = String(today.getDate()).padStart(2, '0');
+      dateInput.value = y + '-' + m + '-' + d;
+
+      nowBtn.addEventListener('click', function () {
+        var t = new Date();
+        dateInput.value = t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+        dateInput.dispatchEvent(new Event('change'));
+      });
+
+      window.SolarSystemDiagram.init({
+        canvas: canvas,
+        dateInput: dateInput,
+        timeLabel: timeLabel,
+        useLiveCheckbox: liveCheckbox,
+        zoomInBtn: document.getElementById('solar-zoom-in'),
+        zoomOutBtn: document.getElementById('solar-zoom-out'),
+        zoomResetBtn: document.getElementById('solar-zoom-reset'),
+        zoomLabel: document.getElementById('solar-zoom-label')
+      });
+    })();
+  </script>
+</body>
+</html>

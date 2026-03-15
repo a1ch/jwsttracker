@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIRSpec | JWST Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-icon">◈</span>
+          <h1>JWST Tracker</h1>
+          <span class="subtitle">James Webb Space Telescope</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav-wrap">
+      <div class="nav-inner">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="orbit.html">Orbit</a>
+        <a href="mirror.html">Mirror</a>
+        <a href="instruments.html" class="active">Instruments</a>
+        <a href="solar-system.html">Solar System</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="technical-specs.html">Specs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <h1>NIRSpec</h1>
+      <p class="lead">The Near-Infrared Spectrograph splits light into spectra so scientists can measure the composition, motion, and distance of galaxies and stars. It can observe up to 100 objects at once.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>What NIRSpec does</h2>
+      <p><strong>NIRSpec</strong> (Near-Infrared Spectrograph) is Webb’s primary spectrograph for the near-infrared range (0.6–5.3 µm). Instead of taking pretty pictures, a spectrograph spreads light into a spectrum—a rainbow of wavelengths. From that spectrum, astronomers can measure the chemical composition of gas and dust, the motion of stars and galaxies (via Doppler shift), and the redshift (and thus distance) of the first galaxies.</p>
+      <p>NIRSpec has three main modes: <strong>multi-object spectroscopy</strong> (observing many targets at once using a microshutter array), <strong>fixed-slit</strong> spectroscopy (a single slit for bright targets), and <strong>integral field unit (IFU)</strong> spectroscopy (a 3×3 arcsecond field split into spatial and spectral information).</p>
+      <div class="media-single">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Webb%27s_First_Deep_Field_%28adjusted%29.jpg" alt="Webb's First Deep Field" loading="lazy" decoding="async">
+        <div class="caption">Galaxies in Webb’s First Deep Field are prime targets for NIRSpec spectroscopy to measure composition and distance. Credit: NASA, ESA, CSA, STScI</div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Microshutter array</h2>
+      <p>One of NIRSpec’s most innovative features is its <strong>microshutter array</strong>: a grid of about 250,000 tiny shutters, each the width of a human hair. Scientists can open only the shutters that align with objects they want to observe (e.g., dozens of galaxies in a single field), and keep the rest closed to block sky background. That way NIRSpec can collect spectra of <strong>up to 100 objects simultaneously</strong>, making surveys of distant galaxies much faster than observing one at a time.</p>
+      <div class="media-grid">
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Stephan%27s_Quintet_as_seen_by_JWST%27s_NIRCAM.png" alt="Stephan's Quintet" loading="lazy" decoding="async">
+          <div class="caption">Stephan’s Quintet—NIRSpec can target individual regions for spectroscopy. Credit: NASA, ESA, CSA, STScI</div>
+        </div>
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sombrero_Galaxy_%28NIRCam-MIRI%29_%282025-127%29.jpg" alt="Sombrero Galaxy" loading="lazy" decoding="async">
+          <div class="caption">Sombrero Galaxy—NIRSpec can probe chemical makeup of different areas. Credit: NASA, ESA, CSA, STScI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Who built it</h2>
+      <p>NIRSpec was built for ESA (European Space Agency) by Airbus with the microshutter array supplied by NASA Goddard. It is one of two ESA-provided instruments on Webb (the other is MIRI, built in partnership with NASA).</p>
+      <div class="card-links">
+        <a href="nircam.html">← NIRCam</a>
+        <a href="instruments.html">All instruments</a>
+        <a href="miri.html">MIRI →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://api.nasa.gov" target="_blank" rel="noopener">NASA Open APIs</a> • <a href="https://webb.nasa.gov" target="_blank" rel="noopener">JWST at NASA</a> • <a href="https://webbtelescope.org" target="_blank" rel="noopener">WebbTelescope.org</a></p>
+  </footer>
+</body>
+</html>
